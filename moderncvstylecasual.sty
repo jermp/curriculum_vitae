@@ -77,7 +77,7 @@
 
   % ensure footer with personal information
   %\makecvfooter
-  
+
   % optional picture
   \newbox{\makecvtitlepicturebox}%
   \savebox{\makecvtitlepicturebox}{%
@@ -108,7 +108,7 @@
       \ifthenelse{\isundefined{\@homepage}}{}{%
   \ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
   {\makenewline\homepagesymbol\httplink{\@homepage}}%
-  {\makenewline\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}% 
+  {\makenewline\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}%
       \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
     \end{tabular}}
 
@@ -137,7 +137,7 @@
         	\ifthenelse{\isundefined{\@homepage}}{}{%
 	\ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
 	{\homepagesymbol\httplink{\@homepage}}%
-	{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}% 
+	{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}%
         \ifthenelse{\isundefined{\@extrainfo}}{}{\@extrainfo}}%
         \ifthenelse{\lengthtest{\footerboxwidth=0pt}}{}{\flushfooter}% the lengthtest is required to avoid flushing an empty footer, which could cause a blank line due to the \\ after the address, if no other personal info is used
         }}}%

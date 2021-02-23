@@ -1,4 +1,4 @@
-\documentclass[8pt, a4paper, sans]{moderncv}
+\documentclass[a4paper, sans]{moderncv}
 \usepackage[utf8]{inputenc}
 
 \moderncvstyle{casual}
@@ -6,12 +6,52 @@
 
 \usepackage[left=2cm, bottom=4cm, right=2cm, top=4cm]{geometry}
 
+
+
+\newcommand{\todo}[1]{{\color{red}{\emph{#1}}}}
+
+
 \firstname{Giulio Ermanno}
 \familyname{Pibiri}
 
 \title{Curriculum Vitae et Studiorum}
 
 \begin{document}
+
+% \textbf{Dichiarazione Sostitutiva di Certificazione (art. 46 DPR n. 445/2000)} \\
+% \textbf{Dichiarazione Sostitutiva dell'Atto di Notorietà (art. 47 DPR n. 445/2000)} \\
+
+% Il sottoscritto Giulio Ermanno Pibiri
+
+% \begin{itemize}
+%     \item nato a Bagno a Ripoli (FI) il 13/07/1990
+%     \item attualmente residente a Prato (PO) in via Guizzelmi, n. 16, CAP 59100
+%     \item reperibile al numero di telefono +39 340 9100050
+% \end{itemize}
+% \vspace{0.3cm}
+
+% visto il D.P.R. 28 dicembre 2000, n. 445 concernente ``T.U. delle disposizioni
+%     legislative e regolamentari in materia di documentazione amministrativa'' e successive
+%     modifiche ed integrazioni;
+% \vspace{0.3cm}
+
+% vista la Legge 12 novembre 2011, n. 183 ed in particolare l'art. 15 concernente
+%     le nuove disposizioni in materia di certificati e dichiarazioni sostituitive;
+% \vspace{0.3cm}
+
+% consapevole che, ai sensi dell'art. 76 del DPR 445/2000, le dichiarazioni mendaci, la falsità
+% negli atti e l'uso di atti falsi sono punite ai sensi del Codice penale e delle leggi speciali vigenti
+% in materia, dichiara sotto la propria responsabilità:
+% che quanto dichiarato nel seguente \emph{Curriculum Vitae et Studiorum}
+% comprensivo delle informazioni sulla produzione scientifica corrisponde a verità.
+
+
+
+
+% \vspace{6cm}
+
+
+
 
 \makecvtitle
 
@@ -21,18 +61,25 @@
 \cvitem{}{Via G. Moruzzi 1, 56124 Pisa, Italy}
 \cvitem{Email}{giulio.pibiri@di.unipi.it}
 \cvitem{Email}{giulio.ermanno.pibiri@isti.cnr.it}
-\cvitem{Personal page}{http://pages.di.unipi.it/pibiri}
+\cvitem{Personal page}{\url{http://pages.di.unipi.it/pibiri}}
+\cvitem{GitHub profile}{\url{https://github.com/jermp}}
 
 \section{Personal Information}
-\cvitem{Place of birth}{Florence, Italy}
+\cvitem{Place of birth}{Bagno a Ripoli (Florence), Italy}
 \cvitem{Date of birth}{13 July 1990}
 
 \section{Research Interests}
-\cvitem{}{Indexing, Efficiency, Data Compression, Algorithm Engineering}
+
+\cvitem{}{Keywords: Indexing, Efficiency, Data Compression, Algorithm Engineering}
+\cvitem{}{The research activity focuses on devising compressed data structures
+and algorithms to index and search large quantities of data.
+The proposed solutions are available as research papers
+and optimized software libraries (typically written in C++).
+}
 
 \section{Education}
 
-\cventry{2015 -- 2018}{PhD in Computer Science (INF/01)}{}{}{}
+\cventry{01/11/2015 -- 31/10/2018}{PhD in Computer Science (INF/01)}{}{}{}
 {\begin{itemize}
 \item University of Pisa, Pisa, Italy
 \item Thesis: \emph{Space- and Time-Efficient Data Structures for Massive Datasets}.\\Defended on 08/03/2019.
@@ -56,8 +103,6 @@
 \item Supervisor: Gabriele Vezzosi (\url{http://www.dma.unifi.it/~vezzosi})
 \end{itemize}}
 
-%\cventry{07/2012 -- 10/2012}{Quantum Mechanics and Quantum Computation on-line course}{University of Berkeley}{Berkeley, California}{}{}
-
 \cventry{2004 -- 2009}{High School Diploma}{}{}{}{
 \begin{itemize}
 \item Liceo Scientifico Statale Guido Castelnuovo, Florence, Italy
@@ -66,38 +111,76 @@
 }
 
 \section{Professional Employment}
-\cventry{11/2018 -- present}{Postdoctoral Researcher in Computer Science}{}{}{}{
+\cventry{01/11/2018 -- 28/02/2021}{Postdoctoral Research Fellow in Computer Science}{}{}{}{
 \begin{itemize}
 \item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
-\item HPC-Lab headed by Raffaele Perego (\url{http://raffaele.isti.cnr.it})
-\end{itemize}
-}
-
-\cventry{06/2017 -- present}{Software Developer at ISTI-CNR}{}{}{}{
+\item Grant issued on the european project BIGDATAGRAPES with theme ``Compressione, indicizzazione e ricerca su grandi collezioni di dati semantici'' (Protocollo n. 0003847, 24/10/2018, ISTI 014/2018 - PI).
+The research activity conducted for this project focused on the design of time and space efficient indexing data structures for structured and unstructured data such as RDF graphs and text documents, including compression techniques for Big data management that support a broad range of analytical queries over arbitrary data dimensions.
+In particular, it resulted in the development of
 \begin{itemize}
-\item European project \emph{Big Data Grapes}, Indexing and Distributed Components, Pisa, Italy
-\item European project \emph{Large-scale Indie Gaming Analytics}, Pisa, Italy
+    \item a novel compressor for inverted indexes;
+    \item a novel compressed index for RDF data.
+    % \item a novel compressor for time series.
+\end{itemize}
+Both results have been published in IEEE Transactions on Knowledge and Data Engineering (TKDE),
+as the papers ``On Optimally Patitioned Variable-Byte Codes'' and ``Compressed Indexes for Fast Search of Semantic Data'',
+with the corresponding C++ libraries available on GitHub at \url{https://github.com/jermp/opt_vbyte} and \url{https://github.com/jermp/rdf_indexes} respectively.
+\item During this period, I also kept doing my own independent research on algorithms and data structures.
+The studied problems involved:
+inverted indexes (CSUR 2020),
+prefix-sums (SPE 2020),
+bitmap compression (DCC 2021),
+query auto-completion (SIGIR 2020),
+rank and select indexes (INFOSYS 2021),
+and minimal perfect hashing.
+Most works have been already published or under consideration, with the whole code available from my GitHub page.
 \end{itemize}
 }
 
-\cventry{11/2015 -- 11/2018}{PhD Student in Computer Science}{}{}{}{
+\cventry{01/06/2017 -- 31/10/2018}{Software Developer}{}{}{}{
+\begin{itemize}
+\item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
+\item Worked for the european project \emph{Large-scale Indie Gaming Analytics} (LIGA).
+The LIGA project aimed at designing and developing a proof-of-concept platform, customized for the 3D-KUMO use case (\url{https://www.3dkumo.com}), to analyze the huge volume volume of data generated by the users of indie games (i.e., players) on web portals and social networks.
+% The purpose of the LIGA platform is to extend the engagement of indie games’ users beyond the gaming experience to the collection and sharing of game-related content, mainly related to 3D printing of game characters.
+% To this end, the LIGA platform consists in three main components:
+% (1) A High Performance Big Data Analysis (HPC-BDA) tool for the near-real time fetching and representation of online social network data related to indie games, including trends, players sentiment and network structure analysis;
+% (2) A Smart Retail Recommendation Engine (REC-ENG) service integrated with the KUMO platform to suggests 3D models to customers, based on the information provided by the HPC-BDA tool;
+% (3) A 3D Content Analytics Service and Dashboard (3D-DASH) service to provide content providers with insights and analysis on why contents are consumed and ``liked'', based on the information provided by the HPC-BDA tool.
+\end{itemize}
+}
+
+\cventry{01/11/2015 -- 31/10/2018}{PhD Student in Computer Science}{}{}{}{
 \begin{itemize}
 \item University of Pisa, Pisa, Italy
 \item Thesis: \emph{Space- and Time-Efficient Data Structures for Massive Datasets}.
 \item Supervisor: Rossano Venturini (\url{http://pages.di.unipi.it/rossano})
+\item Worked on inverted indexing, compressed language models, and tries.
+Reference publications:
+\begin{itemize}
+    \item ``On Optimally Partitioning Variable-Byte Codes'', TKDE 2019; %, C++ code at \url{https://github.com/jermp/opt_vbyte};
+    \item ``Handling Massive N-Gram Datasets Efficiently'', TOIS 2019; %, C++ code at \url{https://github.com/jermp/tongrams};
+    \item ``Fast Dictionary-based Compression for Inverted Indexes'', WSDM 2019; %, C++ code at \url{https://github.com/jermp/dint};
+    \item ``Inverted Index Compression'', EBDT 2018;
+    \item ``Efficient Data Structures for Massive N-Gram Datasets'', SIGIR 2017; %, C++ code at \url{https://github.com/jermp/tongrams};
+    \item ``Dynamic Elias-Fano Representation'', CPM 2017;
+    \item ``Clustered Elias-Fano Indexes'', TOIS 2017. %, C++ code at \url{https://github.com/jermp/clustered_elias_fano_indexes}.
+\end{itemize}
 \end{itemize}}
 
-\cventry{05/2018 -- 10/2018}{Visiting PhD Student}{}{}{}{
+\cventry{01/05/2018 -- 01/10/2018}{Visiting PhD Student}{}{}{}{
 \begin{itemize}
 \item The University of Melbourne, School of Computing and Information Systems, Melbourne, Australia
 \item Supervisor: Alistair Moffat (\url{https://people.eng.unimelb.edu.au/ammoffat})
+\item Worked on fast decoding of compressed inverted index data. Reference publication ``Fast Dictionary-based Compression for Inverted Indexes'', WSDM 2019. %, C++ code at \url{https://github.com/jermp/dint}.
 \end{itemize}
 }
 
-\cventry{04/2018 -- 05/2018}{Visiting PhD Student}{}{}{}{
+\cventry{01/04/2018 -- 30/04/2018}{Visiting PhD Student}{}{}{}{
 \begin{itemize}
 \item RIKEN Advanced Intelligence Project (AIP), Tokyo, Japan
 \item Supervisor: Yasuo Tabei (\url{https://sites.google.com/site/yasuotabei})
+\item Worked on string similarity search, trie indexing, and sparse matrix multiplication.
 \end{itemize}
 }
 
@@ -107,23 +190,64 @@
 %\item Competitive Programming and Contests, Master Degree in Computer Science, University of Pisa, Italy
 %\end{itemize}}
 
-\cventry{04/2015 -- 07/2015}{Software Engineering Intern at IBM}{}{}{}{Rome, Italy}
+\cventry{01/04/2015 -- 01/07/2015}{Software Engineer Intern at IBM}{}{}{}{
+\begin{itemize}
+\item Rome, Italy
+\item Supervisor: Alessio Fioravanti
+\item Worked on the design of the IBM Customer Partnership (Web) Portal for the management of IBM customers and projects.
+\end{itemize}
+}
+
+
+
+\section{Teaching Experience}
+
+\cvitem{02/2020 -- 06/2020}{Teacher for \emph{Algorithmics and Laboratory - Corso B, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
+% \cvitem{}{\url{http://didawiki.cli.di.unipi.it/doku.php/informatica/all-b/start}}
+
+\cvitem{02/2019 -- 06/2019}{Assistant for \emph{Algorithmics and Laboratory - Corso A, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
+% \cvitem{}{\url{http://didawiki.cli.di.unipi.it/doku.php/informatica/all-b/start}}
+
+\cvitem{09/2018 -- 12/2018}{Assistant for \emph{Competitive Programming and Contests, code 645AA}, Master Degree in Computer Science, University of Pisa, Italy}
+% \cvitem{}{\url{https://github.com/rossanoventurini/CompetitiveProgramming/tree/47111d935e5de6755890dd2951742bdf4857ce3b}}
+
+\cvitem{09/2017 -- 12/2017}{Assistant for \emph{Competitive Programming and Contests, code 645AA}, Master Degree in Computer Science, University of Pisa, Italy}
+% \cvitem{}{\url{https://github.com/rossanoventurini/CompetitiveProgramming/tree/9583aa75dc0e2e87c8b0a167d7978360ad9595f5}}
+
+\cvitem{09/2016 -- 12/2016}{Teacher for \emph{Algorithmics and Laboratory - Corso di recupero, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
+% \cvitem{}{\url{http://didawiki.cli.di.unipi.it/doku.php/informatica/alr/start}}
+
+\cvitem{02/2016 -- 06/2016}{Assistant for \emph{Algorithmics and Laboratory - Corso A, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
+% \cvitem{}{\url{http://didawiki.cli.di.unipi.it/doku.php/informatica/all-a/all16/start}}
+
+
 
 \section{Awards and Grants}
 
-\cvitem{2020}{\emph{Young Researcher Award} issued by ISTI-CNR.}{}{}{}
-\cvitem{2017}{\emph{SIGIR Student Travel Grant} issued by ACM SIGIR.}{}{}{}
+\cvitem{2020}{\emph{Young Researcher Award} issued by ISTI-CNR.}
+% \cvitem{}{\url{https://www.isti.cnr.it/en/research/awards/young-researcher-award}}
+
+\cvitem{2017}{\emph{SIGIR Student Travel Grant} issued by ACM SIGIR.}
+% \cvitem{}{\url{https://sigir.org/general-information/travel-grants}}
+
 \cvitem{2015}{\emph{PhD Scholarship}
-issued by the University of Pisa, Department of Computer Science.}{}{}{}
+issued by the University of Pisa, Department of Computer Science.}
+% \cvitem{}{\url{https://dottorato.di.unipi.it/phd-programme/people/alumni}}
+
 \cvitem{2015}{\emph{Master Degree Award: Best Performance a.y. 2013/2014}
-issued by Scuola Superiore Sant'Anna.}{}{}{}
-\cvitem{2015}{\emph{Best Master Thesis Award in Theoretical Computer Science}, issued by the Italian chapter of the European Association for Theoretical Computer Science (EATCS).}{}{}{}
+issued by Scuola Superiore Sant'Anna.}
+% \cvitem{}{\href{https://www.santannapisa.it/it/news/merito-nuovi-riconoscimenti-agli-studenti-della-laurea-magistrale-informatica-e-networking}{\texttt{https://www.santannapisa.it/it/news/merito}}}
+
+\cvitem{2015}{\emph{Best Master Thesis Award in Theoretical Computer Science}, issued by the Italian chapter of the European Association for Theoretical Computer Science (EATCS).}
+% \cvitem{}{\url{https://www.eatcs.org/index.php/italian-chapter}}
 
 \section{Publications}
 
-\cvitem{2021}{Giulio Ermanno Pibiri, \emph{Fast and Compact Set Intersection through Recursive Universe Partitioning}. IEEE Data Compression Conference, pages 10.}
+\cvitem{2021}{Giulio Ermanno Pibiri and Shunsuke Kanda, \emph{Rank/Select Queries over Mutable Bitmaps}. Information Systems (INFOSYS), pages 21.}
 
-\cvitem{2020}{Giulio Ermanno Pibiri and Shunsuke Kanda, \emph{Rank/Select Queries over Mutable Bitmaps}. CoRR, \url{http://arxiv.org/abs/2009.12809}, pages 21.}
+\cvitem{2021}{Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Compressed Indexes for Fast Search of Semantic Data}. IEEE International Conference on Data Engineering (ICDE), pages 2.}
+
+\cvitem{2021}{Giulio Ermanno Pibiri, \emph{Fast and Compact Set Intersection through Recursive Universe Partitioning}. IEEE Data Compression Conference, pages 10.}
 
 \cvitem{2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Techniques for Inverted Index Compression}. ACM Computing Surveys (CSUR), pages 36.}
 
@@ -135,8 +259,6 @@ issued by Scuola Superiore Sant'Anna.}{}{}{}
 
 \cvitem{2020}{Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Compressed Indexes for Fast Search of Semantic Data}. IEEE Transactions on Knowledge and Data Engineering (TKDE), pages 12.}
 
-%\cvitem{2019}{Giulio Ermanno Pibiri, \textbf{On Slicing Sorted Integer Sequences}. CoRR, \url{https://arxiv.org/abs/1907.01032}, pages 20.}
-
 \cvitem{2019}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{On Optimally Partitioning Variable-Byte Codes}. IEEE Transactions on Knowledge and Data Engineering (TKDE), pages 12.}
 
 \cvitem{2019}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Handling Massive N-Gram Datasets Efficiently}. ACM Transactions on Information Systems (TOIS), pages 41.}
@@ -147,7 +269,7 @@ issued by Scuola Superiore Sant'Anna.}{}{}{}
 
 \cvitem{2018}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Inverted Index Compression}. Encyclopedia of Big Data Technologies, pages 8.}
 
-\cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Efficient Data Structures for Massive \emph{N}-Gram Datasets}. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.}
+\cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Efficient Data Structures for Massive N-Gram Datasets}. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.}
 
 \cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Dynamic Elias-Fano Representation}. Annual Symposium on Combinatorial Pattern Matching (CPM), pages 14.}
 
@@ -155,7 +277,7 @@ issued by Scuola Superiore Sant'Anna.}{}{}{}
 
 \section{Software}
 
-\cvitem{GitHub page}{https://github.com/jermp}
+\cvitem{GitHub profile}{\url{https://github.com/jermp}}
 
 \cvitem{\href{https://github.com/jermp/mutable_rank_select}{\textbf{rank\_select}}}{The \textsf{C++} library used for the experiments in the paper \emph{Rank/Select Queries over Mutable Bitmaps}.}
 
@@ -215,23 +337,10 @@ Representations}. Seminar. The University of Pisa, Pisa, Italy.}
 
 \cvitem{21/06/2016}{\emph{Elias-Fano Encoding: succinct representation of monotone integer sequences with search operations}. Seminar. The University of Pisa, Pisa, Italy.}
 
-\section{Teaching Experience}
-
-\cvitem{02/2020 -- 06/2020}{Teacher for \emph{Algorithmics and Laboratory - Corso B, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
-
-\cvitem{02/2019 -- 06/2019}{Assistant for \emph{Algorithmics and Laboratory - Corso A, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
-
-\cvitem{10/2018 -- 12/2018}{Assistant for \emph{Competitive Programming and Contests, code 645AA}, Master Degree in Computer Science, University of Pisa, Italy}
-
-\cvitem{09/2017 -- 12/2017}{Assistant for \emph{Competitive Programming and Contests, code 645AA}, Master Degree in Computer Science, University of Pisa, Italy}
-
-\cvitem{10/2016 -- 12/2016}{Teacher for \emph{Algorithmics and Laboratory - Corso di recupero, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
-
-\cvitem{02/2016 -- 06/2016}{Assistant for \emph{Algorithmics and Laboratory - Corso A, code 008AA}, Bachelor Degree in Computer Science, University of Pisa, Italy}
 
 \section{Professional Activities}
 
-%I have reviewed papers for: SIGIR, WSDM, CIKM, SPIRE, ECIR, TALG, ESA, SPE, INFOSYS, WWW.
+%I have reviewed papers for: SIGIR, WSDM, CIKM, SPIRE, ECIR, TALG, ESA, SPE, INFOSYS, WWW, Algorithmica.
 
 \cvitem{2021}{Member of the Program Committee of the 44-th edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval, (SIGIR 2021).}
 
@@ -279,13 +388,9 @@ Representations}. Seminar. The University of Pisa, Pisa, Italy.}
 \cvitem{01/10/2010}{Driving License of type B}
 \cvitem{23/01/2010}{Driving License of type A}
 
-\section{Web}
-\cvitem{Personal}{http://pages.di.unipi.it/pibiri}
-\cvitem{GitHub}{https://github.com/jermp}
-\cvitem{LinkedIn}{https://www.linkedin.com/in/giulio-ermanno-pibiri-496ab3ab/}
-
-%\section{Interests}
-%\cvitem{Computer Science}{Efficient algorithms and data-structures for storage and fast retrieval of large integer/string data sets. Succinct and compressed data-structures.}
-%\cvitem{Personal}{Painting miniatures, doing sport, music and movies.}
+% \section{Web}
+% \cvitem{Personal}{http://pages.di.unipi.it/pibiri}
+% \cvitem{GitHub}{https://github.com/jermp}
+% \cvitem{LinkedIn}{https://www.linkedin.com/in/giulio-ermanno-pibiri-496ab3ab/}
 
 \end{document}

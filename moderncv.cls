@@ -59,7 +59,7 @@
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
 
 % execute default options
-\ExecuteOptions{a4paper,11pt,final}
+\ExecuteOptions{a4paper,10pt,final}
 
 % process given options
 \ProcessOptions\relax
@@ -259,7 +259,7 @@
 % loads a style scheme
 \newcommand*{\moderncvstyle}[1]{
   \RequirePackage{moderncvstyle#1}}
-  
+
 % loads a color scheme
 \newcommand*{\moderncvcolor}[1]{
   \RequirePackage{moderncvcolor#1}}

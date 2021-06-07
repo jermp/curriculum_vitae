@@ -131,7 +131,7 @@ In particular, it resulted in the development of
     % \item a novel compressor for time series.
 \end{itemize}
 Both results have been published in IEEE Transactions on Knowledge and Data Engineering (TKDE),
-as the papers ``On Optimally Patitioned Variable-Byte Codes'' and ``Compressed Indexes for Fast Search of Semantic Data'',
+as the papers ``On Optimally Patitioning Variable-Byte Codes'' and ``Compressed Indexes for Fast Search of Semantic Data'',
 with the corresponding C++ libraries available on GitHub at \url{https://github.com/jermp/opt_vbyte} and \url{https://github.com/jermp/rdf_indexes} respectively.
 \item During this period, I also kept doing my own independent research on algorithms and data structures.
 The studied problems involved:
@@ -139,7 +139,7 @@ inverted indexes (CSUR 2020),
 prefix-sums (SPE 2020),
 bitmap compression (DCC 2021),
 query auto-completion (SIGIR 2020),
-rank and select indexes (INFOSYS 2021),
+rank and select indexes for bitmaps (INFOSYS 2021),
 and minimal perfect hashing (SIGIR 2021).
 All works have been published in top-tier conferences/journals.
 The corresponding software libraries are available from my GitHub page.
@@ -167,13 +167,13 @@ The LIGA project aimed at designing and developing a proof-of-concept platform, 
 \item Worked on inverted indexing, compressed language models, and tries.
 Reference publications:
 \begin{itemize}
-    \item ``On Optimally Partitioning Variable-Byte Codes'', TKDE 2019; %, C++ code at \url{https://github.com/jermp/opt_vbyte};
-    \item ``Handling Massive N-Gram Datasets Efficiently'', TOIS 2019; %, C++ code at \url{https://github.com/jermp/tongrams};
-    \item ``Fast Dictionary-based Compression for Inverted Indexes'', WSDM 2019; %, C++ code at \url{https://github.com/jermp/dint};
-    \item ``Inverted Index Compression'', EBDT 2018;
-    \item ``Efficient Data Structures for Massive N-Gram Datasets'', SIGIR 2017; %, C++ code at \url{https://github.com/jermp/tongrams};
-    \item ``Dynamic Elias-Fano Representation'', CPM 2017;
-    \item ``Clustered Elias-Fano Indexes'', TOIS 2017. %, C++ code at \url{https://github.com/jermp/clustered_elias_fano_indexes}.
+    \item ``On Optimally Partitioning Variable-Byte Codes'' (TKDE 2019); %, C++ code at \url{https://github.com/jermp/opt_vbyte};
+    \item ``Handling Massive N-Gram Datasets Efficiently'' (TOIS 2019); %, C++ code at \url{https://github.com/jermp/tongrams};
+    \item ``Fast Dictionary-based Compression for Inverted Indexes'' (WSDM 2019); %, C++ code at \url{https://github.com/jermp/dint};
+    \item ``Inverted Index Compression'' (EBDT 2018);
+    \item ``Efficient Data Structures for Massive N-Gram Datasets'' (SIGIR 2017); %, C++ code at \url{https://github.com/jermp/tongrams};
+    \item ``Dynamic Elias-Fano Representation'' (CPM 2017);
+    \item ``Clustered Elias-Fano Indexes'' (TOIS 2017). %, C++ code at \url{https://github.com/jermp/clustered_elias_fano_indexes}.
 \end{itemize}
 \end{itemize}}
 
@@ -181,7 +181,8 @@ Reference publications:
 \begin{itemize}
 \item The University of Melbourne, School of Computing and Information Systems, Melbourne, Australia
 \item Supervisor: Alistair Moffat (\url{https://people.eng.unimelb.edu.au/ammoffat})
-\item Worked on fast decoding of compressed inverted index data. Reference publication ``Fast Dictionary-based Compression for Inverted Indexes'', WSDM 2019. %, C++ code at \url{https://github.com/jermp/dint}.
+\item Worked on fast dictionary-based decoding of compressed inverted index data, which resulted in the
+following publication: ``Fast Dictionary-based Compression for Inverted Indexes'' (WSDM 2019). %, C++ code at \url{https://github.com/jermp/dint}.
 \end{itemize}
 }
 
@@ -189,7 +190,9 @@ Reference publications:
 \begin{itemize}
 \item RIKEN Advanced Intelligence Project (AIP), Tokyo, Japan
 \item Supervisor: Yasuo Tabei (\url{https://sites.google.com/site/yasuotabei})
-\item Worked on string similarity search, trie indexing, and sparse matrix multiplication.
+\item Worked on various problems, such as, string similarity search,
+trie indexing, rank/select indexes, and sparse matrix multiplication.
+Reference publication: ``Rank/Select Queries over Mutable Bitmaps'' (INFOSYS 2021).
 \end{itemize}
 }
 
@@ -278,7 +281,7 @@ issued by Scuola Superiore Sant'Anna.}
 
 \cvitem{2019}{Giulio Ermanno Pibiri, Matthias Petri, Alistair Moffat, \emph{Fast Dictionary-based Compression for Inverted Indexes}. ACM Conference on Web Search and Data Mining (WSDM), pages 9.}
 
-\cvitem{2018}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Variable-Byte Encoding is Now Space-Efficient Too}. CoRR, \url{https://arxiv.org/abs/1804.10949}, pages 14.}
+% \cvitem{2018}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Variable-Byte Encoding is Now Space-Efficient Too}. CoRR, \url{https://arxiv.org/abs/1804.10949}, pages 14.}
 
 \cvitem{2018}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Inverted Index Compression}. Encyclopedia of Big Data Technologies (EBDT), pages 8.}
 
@@ -288,33 +291,133 @@ issued by Scuola Superiore Sant'Anna.}
 
 \cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Clustered Elias-Fano Indexes}. ACM Transactions on Information Systems (TOIS), volume 2, pages 33.}
 
+
 \section{Software}
 
 \cvitem{GitHub profile}{\url{https://github.com/jermp}}
 
-\cvitem{\href{https://github.com/jermp/pthash}{\textbf{pthash}}}{The \textsf{C++} library used for the experiments in the papers \emph{PTHash: Revisiting FCH Minimal Perfect Hashing} and \emph{Parallel and External-Memory Construction of Minimal Perfect Hash Functions with PTHash}.}
+\bigskip
+\subsection{\textbf{Data Structures}}
 
-\cvitem{\href{https://github.com/jermp/mutable_rank_select}{\textbf{rank\_select}}}{The \textsf{C++} library used for the experiments in the paper \emph{Rank/Select Queries over Mutable Bitmaps}.}
+\cvitem{}{At my GitHub profile you can find efficient C++ implementations of the following data structures (see also related publications):
+\begin{itemize}
+\item Inverted Indexes (TOIS 2017, TKDE 2019, WSDM 2019, SIGIR 2020, CSUR 2020)
+\item Tries (SIGIR 2017, TOIS 2019, TKDE 2020)
+\item Compressed Bitmaps (DCC 2021)
+\item Mutable Bitmaps with Rank/Select (INFOSYS 2021)
+\item Segment-Trees and Fenwick-Trees (SPE 2020)
+\item Minimal Perfect Hash Functions (SIGIR 2021)
+\end{itemize}
+A more detailed list follows below.
+}
 
-\cvitem{\href{https://github.com/jermp/psds}{\textbf{psds}}}{The \textsf{C++} library used for the experiments in the paper \emph{Practical Trade-Offs for the Prefix-Sum Problem}.}
+\cvitem{\href{https://github.com/jermp/pthash}{\textbf{pthash}}}{
+PTHash: Fast and compact minimal perfect hash functions.
+Reference publications: SIGIR 2021, arXiv 2106.02350 2021.
+% The \textsf{C++} library used for the experiments in the papers \emph{PTHash: Revisiting FCH Minimal Perfect Hashing} and \emph{Parallel and External-Memory Construction of Minimal Perfect Hash Functions with PTHash}.
+}
 
-\cvitem{\href{https://github.com/jermp/essentials}{\textbf{essentials}}}{A \textsf{C++} library providing essential core utilities for data structure design and benchmarking.}
+\cvitem{\href{https://github.com/jermp/mutable_rank_select}{\textbf{rank\_select}}}{
+Mutable bitmaps with support for Rank and Select queries.
+Reference publication: INFOSYS 2021.
+% The \textsf{C++} library used for the experiments in the paper \emph{Rank/Select Queries over Mutable Bitmaps}.
+}
 
-\cvitem{\href{https://github.com/jermp/autocomplete}{\textbf{autocomplete}}}{The \textsf{C++} library used for the experiments in the paper \emph{Efficient and Effective Query Auto-Completion}.}
+\cvitem{\href{https://github.com/jermp/psds}{\textbf{psds}}}{
+A range of tree-shaped data structures for maintaining prefix-sums, including:
+\begin{itemize}
+\item binary Segment-Tree (top-down and bottom-up),
+\item b-ary Segment-Tree,
+\item Fenwick-Tree,
+\item b-ary Fenwick-Tree,
+\item blocked Fenwick-Tree,
+\item truncated Fenwick-Tree.
+\end{itemize}
+Reference publication: SPE 2020.
+% The \textsf{C++} library used for the experiments in the paper \emph{Practical Trade-Offs for the Prefix-Sum Problem}.
+}
 
-\cvitem{\href{https://github.com/jermp/2i_bench}{\textbf{2i\_bench}}}{The \textsf{C++} library used for the experiments in the paper \emph{Techniques for Inverted Index Compression}.}
+\cvitem{\href{https://github.com/jermp/autocomplete}{\textbf{autocomplete}}}{Efficienct and effective
+autocompletion framework, based on forward/inverted indexes, succinct RMQ, and string dictionaries (Front-Coding and tries).
+Reference publication: SIGIR 2020.
+% The \textsf{C++} library used for the experiments in the paper \emph{Efficient and Effective Query Auto-Completion}.
+}
 
-\cvitem{\href{https://github.com/jermp/s_indexes}{\textbf{s\_indexes}}}{The \textsf{C++} library used for the experiments in the paper \emph{Fast and Compact Set Intersection thorough Recursive Universe Partitioning}.}
+\cvitem{\href{https://github.com/jermp/2i_bench}{\textbf{2i\_bench}}}{
+A benchmarking suite for inverted index data structures, featuring the following compressors:
+\begin{itemize}
+\item Elias-Fano and partitioned Elias-Fano,
+\item Opt-PFor-Delta,
+\item Binary Interpolative,
+\item QMX,
+\item Simple family,
+\item Variable-Byte family, including Opt-VByte,
+\item Gamma, Delta, Rice, Zeta,
+\item DINT.
+\end{itemize}
+Reference publication: CSUR 2020.
+% The \textsf{C++} library used for the experiments in the paper \emph{Techniques for Inverted Index Compression}.
+}
 
-\cvitem{\href{https://github.com/jermp/rdf_indexes}{\textbf{rdf\_indexes}}}{The \textsf{C++} library used for the experiments in the paper \emph{Compressed Indexes for Fast Search of Semantic Data}.}
+\cvitem{\href{https://github.com/jermp/s_indexes}{\textbf{s\_indexes}}}{
+Compressed bitmap indexes that support fast intersection and union.
+Reference publication: DCC 2021.
+% The \textsf{C++} library used for the experiments in the paper \emph{Fast and Compact Set Intersection thorough Recursive Universe Partitioning}.
+}
 
-\cvitem{\href{https://github.com/jermp/dint}{\textbf{dint}}}{The \textsf{C++} library used for the experiments in the paper \emph{Fast Dictionary-based Compression for Inverted Indexes}.}
+\cvitem{\href{https://github.com/jermp/rdf_indexes}{\textbf{rdf\_indexes}}}{
+Trie-based indexes for semantic data like RDF triples.
+Reference publication: TKDE 2020.
+% The \textsf{C++} library used for the experiments in the paper \emph{Compressed Indexes for Fast Search of Semantic Data}.
+}
 
-\cvitem{\href{https://github.com/jermp/opt_vbyte}{\textbf{opt\_vbyte}}}{The \textsf{C++} library used for the experiments in the paper \emph{On Optimally Partitioning Variable-Byte Codes}.}
+\cvitem{\href{https://github.com/jermp/dint}{\textbf{dint}}}{
+DINT: fast and compact dictionary-based decoder for inverted lists.
+Reference publication: WSDM 2019.
+% The \textsf{C++} library used for the experiments in the paper \emph{Fast Dictionary-based Compression for Inverted Indexes}.
+}
 
-\cvitem{\href{https://github.com/jermp/tongrams}{\textbf{tongrams}}}{The \textsf{C++} library implementing the compressed data structures and algorithms described in the papers \emph{Efficient Data Structures for Massive N-Gram Datasets} and \emph{Handling Massive N-Gram Datasets Efficiently}.}
+\cvitem{\href{https://github.com/jermp/opt_vbyte}{\textbf{opt\_vbyte}}}{
+Optimal partitioning of inverted lists compressed using binary vectors
+and point-wise encoders, like Variable-Byte.
+Reference publication: TKDE 2019.
+% The \textsf{C++} library used for the experiments in the paper \emph{On Optimally Partitioning Variable-Byte Codes}.
+}
 
-\cvitem{\href{https://github.com/jermp/clustered_elias_fano_indexes}{\textbf{clustered\_indexes}}}{The \textsf{C++} library used for the experiments in the paper \emph{Clustered Elias-Fano Indexes}.}
+\cvitem{\href{https://github.com/jermp/tongrams}{\textbf{tongrams}}}{
+Fast language model queries and estimation in compressed space.
+Reference publications: SIGIR 2017, TOIS 2019.
+% The \textsf{C++} library implementing the compressed data structures and algorithms described in the papers \emph{Efficient Data Structures for Massive N-Gram Datasets} and \emph{Handling Massive N-Gram Datasets Efficiently}.
+}
+
+\cvitem{\href{https://github.com/jermp/clustered_elias_fano_indexes}{\textbf{clustered\_indexes}}}{
+Clustered Elias-Fano inverted indexes.
+Reference publication: TOIS 2017.
+% The \textsf{C++} library used for the experiments in the paper \emph{Clustered Elias-Fano Indexes}.
+}
+
+\bigskip
+\subsection{\textbf{Miscellanea}}
+
+\cvitem{\href{https://github.com/jermp/essentials}{\textbf{essentials}}}{A \textsf{C++} library providing essential core utilities for data structure design and benchmarking.
+More precisely:
+\begin{itemize}
+\item benchmarking facilities, including: messages displaying local time, configurable timer class, function to prevent code elision by compiler, simple creation and printing of json documents;
+\item functions to serialize-to and load-from disk data structures,
+\item functions to compute the numbr of bytes consumed by data structures,
+\item support for creating, removing, and iterate inside directories,
+\item transparent support for contiguous memory allocation.
+\end{itemize}
+}
+
+\cvitem{\href{https://github.com/jermp/cmd_line_parser}{\textbf{cmd\_line}}}{
+Command line parser for C++17. It offers all handy features in just 150 lines of code.
+}
+
+\cvitem{\href{https://github.com/jermp/mm_file}{\textbf{mm\_file}}}{
+A self-contained, header-only, implementation of memory-mapped files in C++ for both reading and writing.
+}
+
 
 \section{Talks}
 
@@ -361,21 +464,21 @@ Representations}. Seminar. The University of Pisa, Pisa, Italy.}
 
 \section{Professional Activities}
 
-\cvitem{2021}{Member of the Program Committee of the 30-th edition of the International ACM Conference on Information and Knowledge Management, (CIKM 2021).}
+\cvitem{2021}{Member of the Program Committee of the 30-th edition of the International ACM Conference on Information and Knowledge Management (CIKM 2021).}
 
-\cvitem{2021}{Member of the Program Committee of the 44-th edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval, (SIGIR 2021).}
+\cvitem{2021}{Member of the Program Committee of the 44-th edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2021).}
 
 \cvitem{2021}{Member of the Program Committee of the 43-rd European Conference on Information Retrieval (ECIR 2021).}
 
 \cvitem{2020}{Member of the Program Committee of the 14-th International ACM Conference on Web Search and Data Mining (WSDM 2021).}
 
-\cvitem{2020}{Member of the Program Committee of the 29-th edition of the International ACM Conference on Information and Knowledge Management, (CIKM 2020).}
+\cvitem{2020}{Member of the Program Committee of the 29-th edition of the International ACM Conference on Information and Knowledge Management (CIKM 2020).}
 
 \cvitem{2020}{Member of the Organizing Committee of the 28-th edition of the Annual European Symposium on Algorithms (ESA 2020).}
 
-\cvitem{2020}{Member of the Program Committee of the 43-rd edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval, (SIGIR 2020).}
+\cvitem{2020}{Member of the Program Committee of the 43-rd edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2020).}
 
-\cvitem{2019}{Member of the Program Committee of the 42-nd edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval, (SIGIR 2019).}
+\cvitem{2019}{Member of the Program Committee of the 42-nd edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2019).}
 
 \cvitem{2019}{Member of the Organizing Committee of the 30-th edition of the International Symposium on Combinatorial Pattern Matching (CPM 2019).}
 
@@ -383,7 +486,7 @@ Representations}. Seminar. The University of Pisa, Pisa, Italy.}
 
 \cvitem{2017}{Member of the Organizing Committee of the 24-th edition of the International Symposium on String Processing and Information Retrieval (SPIRE 2017).}
 
-\cvitem{2016}{Student volunteer for the organization of the 39-th edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval, (SIGIR 2016).}
+\cvitem{2016}{Student volunteer for the organization of the 39-th edition of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2016).}
 
 \cvitem{2016 -- present}{Anonymous reviewer for the following conferences/journals:
 SIGIR, WSDM, WWW, CIKM, TALG, ESA, INFOSYS, SPE, CPM, DCC, ECIR, SPIRE, Algorithmica.}

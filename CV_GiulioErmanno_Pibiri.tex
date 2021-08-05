@@ -4,9 +4,9 @@
 \moderncvstyle{casual}
 \moderncvcolor{black}
 
-\usepackage[left=2cm, bottom=4cm, right=2cm, top=4cm]{geometry}
+\usepackage[left=2cm, bottom=3cm, right=2cm, top=3cm]{geometry}
 
-
+\newcommand{\return}{\vspace{0.3cm}}
 
 \newcommand{\todo}[1]{{\color{red}{\emph{#1}}}}
 
@@ -17,41 +17,6 @@
 \title{Curriculum Vitae et Studiorum}
 
 \begin{document}
-
-
-
-%%%%%
-% \textbf{Dichiarazione Sostitutiva di Certificazione (art. 46 DPR n. 445/2000)} \\
-% \textbf{Dichiarazione Sostitutiva dell'Atto di Notorietà (art. 47 DPR n. 445/2000)} \\
-
-% Il sottoscritto Giulio Ermanno Pibiri
-
-% \begin{itemize}
-%     \item nato a Bagno a Ripoli (FI) il 13/07/1990
-%     \item attualmente residente a Prato (PO) in via Guizzelmi, n. 16, CAP 59100
-%     \item reperibile al numero di telefono +39 340 9100050
-% \end{itemize}
-% \vspace{0.3cm}
-
-% visto il D.P.R. 28 dicembre 2000, n. 445 concernente ``T.U. delle disposizioni
-%     legislative e regolamentari in materia di documentazione amministrativa'' e successive
-%     modifiche ed integrazioni;
-% \vspace{0.3cm}
-
-% vista la Legge 12 novembre 2011, n. 183 ed in particolare l'art. 15 concernente
-%     le nuove disposizioni in materia di certificati e dichiarazioni sostituitive;
-% \vspace{0.3cm}
-
-% consapevole che, ai sensi dell'art. 76 del DPR 445/2000, le dichiarazioni mendaci, la falsità
-% negli atti e l'uso di atti falsi sono punite ai sensi del Codice penale e delle leggi speciali vigenti
-% in materia, dichiara sotto la propria responsabilità:
-% che quanto dichiarato nel seguente \emph{Curriculum Vitae et Studiorum}
-% comprensivo delle informazioni sulla produzione scientifica corrisponde a verità.
-
-% \vspace{6cm}
-%%%%%
-
-
 
 \makecvtitle
 
@@ -68,26 +33,7 @@
 \cvitem{Place of birth}{Bagno a Ripoli (Florence), Italy}
 \cvitem{Date of birth}{13 July 1990}
 
-\section{Research Interests}
 
-\cvitem{Keywords}{Data Structures, Data Compression, Indexing, Efficiency}
-
-\cvitem{Short description}{The research activity focuses on devising compressed data structures
-and algorithms to index and search large quantities of data.
-The proposed solutions are available as research papers
-and optimized software libraries (written in C++).}
-
-\cvitem{Studied problems}{
-Succinct and Dynamic Ordered Sets;
-Inverted Index Compression;
-Indexing and Estimation of Language Models;
-Indexing of Semantic Relations;
-Bitmap Compression;
-Query Auto-Completion;
-Rank/Select Queries;
-Prefix-Sums;
-Minimal Perfect Hashing.
-}
 
 \section{Education}
 
@@ -128,63 +74,46 @@ Minimal Perfect Hashing.
 \end{itemize}
 }
 
-\section{Professional Employment}
+
+
+\section{Research Interests}
+
+\cvitem{Keywords}{Data Structures, Data Compression, Indexing, Efficiency}
+
+\cvitem{Short Sescription}{The research activity focuses on devising compressed data structures
+and algorithms to index and search large quantities of data.
+The proposed solutions are available as research papers
+and optimized software libraries (written in C++).}
+
+\cvitem{Research Problems}{
+Time Series Compression (SPIRE 2021);
+Minimal Perfect Hashing (SIGIR 2021);
+Prefix-Sums (SPE 2020);
+Rank/Select Queries (INFOSYS 2021);
+Query Auto-Completion (SIGIR 2020);
+Bitmap Compression (DCC 2021);
+Indexing of Semantic Relations (TKDE 2020, ICDE 2021);
+Indexing and Estimation of Language Models (SIGIR 2017, TOIS 2019);
+Inverted Index Compression (TOIS 2017, EBDT 2018, WSDM 2019, TKDE 2019, CSUR 2020);
+Succinct and Dynamic Ordered Sets of Integers (CPM 2017);
+}
+
+
+\section{Research Activity and Grants}
 
 \cventry{15/03/2021 -- present}{Postdoctoral Research Fellow in Computer Science}{}{}{}{
 \begin{itemize}
 \item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
-\item Project: European project ACCORDION with theme ``Tecniche algoritmiche per compressione, indicizzazione e ricerca di grandi quantità di dati e progettazione di relative librerie software open source'' (Protocollo n. 0000901/2021, 09/03/2021, ISTI 004/2021 - PI).
-\item Role: Principal Investigator
+\item Research grant issued on the European project ACCORDION with theme ``Tecniche algoritmiche per compressione, indicizzazione e ricerca di grandi quantità di dati e progettazione di relative librerie software open source'' (Protocollo n. 0000901/2021, 09/03/2021, ISTI 004/2021 - PI)
+\item Reference publications: SIGIR 2021, SPIRE 2021
 \end{itemize}
 }
 
 \cventry{01/11/2018 -- 28/02/2021}{Postdoctoral Research Fellow in Computer Science}{}{}{}{
 \begin{itemize}
 \item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
-\item Project: European project BIGDATAGRAPES with theme ``Compressione, indicizzazione e ricerca su grandi collezioni di dati semantici'' (Protocollo n. 0003847, 24/10/2018, ISTI 014/2018 - PI).
-\item Role: Principal Investigator
-\item Description: The research activity conducted for this project focused on the design of time and space efficient indexing data structures for structured and unstructured data such as RDF graphs and text documents, including compression techniques for Big data management that support a broad range of analytical queries over arbitrary data dimensions.
-In particular, it resulted in the development of
-\begin{itemize}
-    \item a novel compressor for inverted indexes;
-    \item a novel compressed index for RDF data.
-    % \item a novel compressor for time series.
-\end{itemize}
-Both results have been published in IEEE Transactions on Knowledge and Data Engineering (TKDE),
-as the papers
-\begin{itemize}
-\item ``On Optimally Patitioning Variable-Byte Codes''
-\item ``Compressed Indexes for Fast Search of Semantic Data''
-\end{itemize}
-with the corresponding C++ libraries available on GitHub at
-\begin{itemize}
-\item \url{https://github.com/jermp/opt_vbyte}
-\item \url{https://github.com/jermp/rdf_indexes}
-\end{itemize}
-\item During this period, I also kept doing my own independent research on algorithms and data structures.
-The studied problems involved:
-inverted indexes (CSUR 2020),
-prefix-sums (SPE 2020),
-bitmap compression (DCC 2021),
-query auto-completion (SIGIR 2020),
-rank and select indexes for bitmaps (INFOSYS 2021),
-and minimal perfect hashing (SIGIR 2021).
-All works have been published in top-tier conferences/journals.
-The corresponding software libraries are available from my GitHub page.
-\end{itemize}
-}
-
-\cventry{01/06/2017 -- 31/10/2018}{Software Developer}{}{}{}{
-\begin{itemize}
-\item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
-\item Project: European project \emph{Large-scale Indie Gaming Analytics} (LIGA).
-\item Role: Principal Developer
-\item Description: The LIGA project aimed at designing and developing a proof-of-concept platform, customized for the 3D-KUMO use case (\url{https://www.3dkumo.com}), to analyze the huge volume volume of data generated by the users of indie games (i.e., players) on web portals and social networks.
-% The purpose of the LIGA platform is to extend the engagement of indie games’ users beyond the gaming experience to the collection and sharing of game-related content, mainly related to 3D printing of game characters.
-% To this end, the LIGA platform consists in three main components:
-% (1) A High Performance Big Data Analysis (HPC-BDA) tool for the near-real time fetching and representation of online social network data related to indie games, including trends, players sentiment and network structure analysis;
-% (2) A Smart Retail Recommendation Engine (REC-ENG) service integrated with the KUMO platform to suggests 3D models to customers, based on the information provided by the HPC-BDA tool;
-% (3) A 3D Content Analytics Service and Dashboard (3D-DASH) service to provide content providers with insights and analysis on why contents are consumed and ``liked'', based on the information provided by the HPC-BDA tool.
+\item Research grant issued on the European project BIGDATAGRAPES with theme ``Compressione, indicizzazione e ricerca su grandi collezioni di dati semantici'' (Protocollo n. 0003847, 24/10/2018, ISTI 014/2018 - PI)
+\item Reference publications: TKDE 2019, TKDE 2020, SIGIR 2020, SPE 2020, INFOSYS 2021, DCC 2021, ICDE 2021
 \end{itemize}
 }
 
@@ -193,52 +122,119 @@ The corresponding software libraries are available from my GitHub page.
 \item University of Pisa, Pisa, Italy
 \item Thesis: \emph{Space- and Time-Efficient Data Structures for Massive Datasets}
 \item Supervisor: Rossano Venturini (\url{https://rossanoventurini.github.io})
-\item Worked on inverted indexing, compressed language models, and tries.
-The thesis is based on the following publications.
-\begin{itemize}
-    \item ``On Optimally Partitioning Variable-Byte Codes'' (TKDE 2019) %, C++ code at \url{https://github.com/jermp/opt_vbyte};
-    \item ``Handling Massive N-Gram Datasets Efficiently'' (TOIS 2019) %, C++ code at \url{https://github.com/jermp/tongrams};
-    \item ``Fast Dictionary-based Compression for Inverted Indexes'' (WSDM 2019) %, C++ code at \url{https://github.com/jermp/dint};
-    \item ``Inverted Index Compression'' (EBDT 2018)
-    \item ``Efficient Data Structures for Massive N-Gram Datasets'' (SIGIR 2017) %, C++ code at \url{https://github.com/jermp/tongrams};
-    \item ``Dynamic Elias-Fano Representation'' (CPM 2017)
-    \item ``Clustered Elias-Fano Indexes'' (TOIS 2017) %, C++ code at \url{https://github.com/jermp/clustered_elias_fano_indexes}.
+\item Reference publications: TKDE 2019, TOIS 2019, WSDM 2019, SIGIR 2017, CPM 2017, TOIS 2017
+    % \begin{itemize}
+    %     \item ``On Optimally Partitioning Variable-Byte Codes'' (TKDE 2019) %, C++ code at \url{https://github.com/jermp/opt_vbyte};
+    %     \item ``Handling Massive N-Gram Datasets Efficiently'' (TOIS 2019) %, C++ code at \url{https://github.com/jermp/tongrams};
+    %     \item ``Fast Dictionary-based Compression for Inverted Indexes'' (WSDM 2019) %, C++ code at \url{https://github.com/jermp/dint};
+    %     \item ``Inverted Index Compression'' (EBDT 2018)
+    %     \item ``Efficient Data Structures for Massive N-Gram Datasets'' (SIGIR 2017) %, C++ code at \url{https://github.com/jermp/tongrams};
+    %     \item ``Dynamic Elias-Fano Representation'' (CPM 2017)
+    %     \item ``Clustered Elias-Fano Indexes'' (TOIS 2017) %, C++ code at \url{https://github.com/jermp/clustered_elias_fano_indexes}.
+    % \end{itemize}
 \end{itemize}
-\end{itemize}}
-
-\cventry{01/05/2018 -- 01/10/2018}{Visiting PhD Student}{}{}{}{
+Part of the research was conducted \textbf{abroad} (6 months):
 \begin{itemize}
-\item The University of Melbourne, School of Computing and Information Systems, Melbourne, Australia
-\item Supervisor: Alistair Moffat (\url{https://people.eng.unimelb.edu.au/ammoffat})
-\item Worked on fast dictionary-based decoding of compressed inverted index data, which resulted in the
-following publication: ``Fast Dictionary-based Compression for Inverted Indexes'' (WSDM 2019). %, C++ code at \url{https://github.com/jermp/dint}.
+    \item 01/05/2018 -- 01/10/2018
+        \begin{itemize}
+            \item The University of Melbourne, School of Computing and Information Systems, Melbourne, Australia
+            \item Supervisor: Alistair Moffat (\url{https://people.eng.unimelb.edu.au/ammoffat})
+            \item Worked on fast dictionary-based decoding of compressed inverted index data.
+            \item Reference publication: WSDM 2019
+        \end{itemize}
+    \item 01/04/2018 -- 30/04/2018
+        \begin{itemize}
+            \item RIKEN Advanced Intelligence Project (AIP), Tokyo, Japan
+            \item Supervisor: Yasuo Tabei (\url{https://sites.google.com/site/yasuotabei})
+            \item Worked on various problems, such as, string similarity search,
+            trie indexing, rank/select indexes, and sparse matrix multiplication.
+            \item Reference publication: INFOSYS 2021
+        \end{itemize}
 \end{itemize}
 }
 
-\cventry{01/04/2018 -- 30/04/2018}{Visiting PhD Student}{}{}{}{
+
+\section{Projects}
+
+\cventry{15/03/2021 -- present}{European project ACCORDION}{}{}{}{
 \begin{itemize}
-\item RIKEN Advanced Intelligence Project (AIP), Tokyo, Japan
-\item Supervisor: Yasuo Tabei (\url{https://sites.google.com/site/yasuotabei})
-\item Worked on various problems, such as, string similarity search,
-trie indexing, rank/select indexes, and sparse matrix multiplication.
-Reference publication: ``Rank/Select Queries over Mutable Bitmaps'' (INFOSYS 2021).
+\item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
+\item European project ACCORDION with theme ``Tecniche algoritmiche per compressione, indicizzazione e ricerca di grandi quantità di dati e progettazione di relative librerie software open source''
+\item Role: Principal Investigator
 \end{itemize}
 }
 
-%\cventry{02/2016 -- present}{Teaching Assistant}{}{}{}{
-%\begin{itemize}
-%\item Algorithmics and Laboratory, Bachelor Degree in Computer Science, University of Pisa, Italy
-%\item Competitive Programming and Contests, Master Degree in Computer Science, University of Pisa, Italy
-%\end{itemize}}
-
-\cventry{01/04/2015 -- 01/07/2015}{Software Engineer Intern at IBM}{}{}{}{
+\cventry{01/11/2018 -- 28/02/2021}{European project BIGDATAGRAPES}{}{}{}{
 \begin{itemize}
-\item Rome, Italy
+\item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
+\item European project BIGDATAGRAPES with theme ``Compressione, indicizzazione e ricerca su grandi collezioni di dati semantici''
+\item Role: Principal Investigator
+% \item Description: The research activity conducted for this project focused on the design of time and space efficient indexing data structures for structured and unstructured data such as RDF graphs and text documents, including compression techniques for Big data management that support a broad range of analytical queries over arbitrary data dimensions.
+% In particular, it resulted in the development of
+% \begin{itemize}
+%     \item a novel compressor for inverted indexes;
+%     \item a novel compressed index for RDF data.
+%     % \item a novel compressor for time series.
+% \end{itemize}
+% Both results have been published in IEEE Transactions on Knowledge and Data Engineering (TKDE),
+% as the papers
+% \begin{itemize}
+% \item ``On Optimally Patitioning Variable-Byte Codes''
+% \item ``Compressed Indexes for Fast Search of Semantic Data''
+% \end{itemize}
+% with the corresponding C++ libraries available on GitHub at
+% \begin{itemize}
+% \item \url{https://github.com/jermp/opt_vbyte}
+% \item \url{https://github.com/jermp/rdf_indexes}
+% \end{itemize}
+% \item During this period, I also kept doing my own independent research on algorithms and data structures.
+% The studied problems involved:
+% inverted indexes (CSUR 2020),
+% prefix-sums (SPE 2020),
+% bitmap compression (DCC 2021),
+% query auto-completion (SIGIR 2020),
+% rank and select indexes for bitmaps (INFOSYS 2021),
+% and minimal perfect hashing (SIGIR 2021).
+% All works have been published in top-tier conferences/journals.
+% The corresponding software libraries are available from my GitHub page.
+\end{itemize}
+}
+
+\cventry{01/06/2017 -- 31/10/2018}{European project LIGA}{}{}{}{
+\begin{itemize}
+\item Institute of Science and Information Technologies ``A. Faedo'' (ISTI), National Research Council of Italy (CNR), Pisa, Italy
+\item European project \emph{Large-scale Indie Gaming Analytics} (LIGA)
+\item Role: Principal Developer
+% \item Description: The LIGA project aimed at designing and developing a proof-of-concept platform, customized for the 3D-KUMO use case (\url{https://www.3dkumo.com}), to analyze the huge volume volume of data generated by the users of indie games (i.e., players) on web portals and social networks.
+% The purpose of the LIGA platform is to extend the engagement of indie games’ users beyond the gaming experience to the collection and sharing of game-related content, mainly related to 3D printing of game characters.
+% To this end, the LIGA platform consists in three main components:
+% (1) A High Performance Big Data Analysis (HPC-BDA) tool for the near-real time fetching and representation of online social network data related to indie games, including trends, players sentiment and network structure analysis;
+% (2) A Smart Retail Recommendation Engine (REC-ENG) service integrated with the KUMO platform to suggests 3D models to customers, based on the information provided by the HPC-BDA tool;
+% (3) A 3D Content Analytics Service and Dashboard (3D-DASH) service to provide content providers with insights and analysis on why contents are consumed and ``liked'', based on the information provided by the HPC-BDA tool.
+\end{itemize}
+}
+
+
+\section{Other Work Experience}
+
+\cventry{01/04/2015 -- 01/07/2015}{Software Engineer Intern}{}{}{}{
+\begin{itemize}
+\item IBM, Rome, Italy
 \item Supervisor: Alessio Fioravanti
 \item Worked on the design of the IBM Customer Partnership (Web) Portal for the management of IBM customers and projects.
 \end{itemize}
 }
 
+
+\section{Training Activity}
+
+\cventry{05/03/2016 -- 11/03/2016}{Bertinoro International Spring School (BISS)}{}{}{}{
+\begin{itemize}
+\item \emph{Advanced Topics in Programming Languages} (13 hours) -- Giuseppe Castagna, Université Paris Diderot – Paris 7
+\item \emph{Models and Languages for Service-Oriented and Cloud Computing} (13 hours) -- Gianluigi Zavattaro, University of Bologna
+\item \emph{Algorithmic methods for mining large graphs} (13 hours) -- Aristides Gionis, Aalto University
+\end{itemize}
+}
 
 
 \section{Teaching Experience}
@@ -262,6 +258,56 @@ Reference publication: ``Rank/Select Queries over Mutable Bitmaps'' (INFOSYS 202
 % \cvitem{}{\url{http://didawiki.cli.di.unipi.it/doku.php/informatica/all-a/all16/start}}
 
 
+\section{Organizing Committees}
+
+\cvitem{2020}{The 28-th edition of the Annual European Symposium on Algorithms (ESA 2020).}
+\cvitem{2019}{The 30-th edition of the International Symposium on Combinatorial Pattern Matching (CPM 2019).}
+\cvitem{2017}{The 24-th International Symposium on String Processing and Information Retrieval (SPIRE 2017).}
+\cvitem{2016}{The 39-th ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2016). (As student volunteer)}
+
+
+\section{Program Committees}
+
+\cvitem{2021}{The 15-th IEEE International Conference on Application of Information and Communication Technologies (AICT 2021).}
+\cvitem{2021}{The 30-th ACM International Conference on Information and Knowledge Management (CIKM 2021).}
+\cvitem{2021}{The 44-th ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2021).}
+\cvitem{2021}{The 43-rd European Conference on Information Retrieval (ECIR 2021).}
+\cvitem{2020}{The 14-th International ACM Conference on Web Search and Data Mining (WSDM 2021).}
+\cvitem{2020}{The 29-th ACM International Conference on Information and Knowledge Management (CIKM 2020).}
+\cvitem{2020}{The 43-rd ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2020).}
+\cvitem{2019}{The 42-nd ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2019).}
+\cvitem{2018}{The 2-nd Workshop on Knowledge Graphs and Semantics for Text Retrieval and Analysis (KG4IR), in conjuction with ACM SIGIR 2018.}
+
+
+\section{Reviewing Activity}
+As of 2016, I am or have been an anonymous reviewer for the following conferences/journals.
+
+\medskip
+\subsection{\textbf{Conferences}}
+\cvitem{}{
+\begin{itemize}
+    \item SIGIR — ACM Conference on Research and Development in Information Retrieval
+    \item WSDM — ACM Conference on Web Search and Data Mining
+    \item WWW — The Web Conference
+    \item CIKM — ACM Conference on Information and Knowledge Management
+    \item CPM — Annual Symposium on Combinatorial Pattern Matching
+    \item DCC — IEEE Data Compression Conference
+    \item ECIR — European Conference on Information Retrieval
+    \item ESA — European Symposium on Algorithms
+    \item SPIRE — String Processing and Information Retrieval
+    \item ISAAC - International Symposium on Algorithms and Computation
+\end{itemize}
+}
+
+\subsection{\textbf{Journals}}
+\cvitem{}{
+\begin{itemize}
+    \item TALG — ACM Transactions on Algorithms
+    \item INFOSYS — Information Systems
+    \item SPE — Software: Practice and Experience
+    \item Algorithmica
+\end{itemize}
+}
 
 \section{Awards and Grants}
 
@@ -282,23 +328,62 @@ issued by Scuola Superiore Sant'Anna.}
 \cvitem{2015}{\emph{Best Master Thesis Award in Theoretical Computer Science}, issued by the Italian chapter of the European Association for Theoretical Computer Science (EATCS).}
 % \cvitem{}{\url{https://www.eatcs.org/index.php/italian-chapter}}
 
+
+\section{Talks}
+
+\medskip
+\subsection{\textbf{Conferences}}
+
+\cvitem{07/2021}{\emph{PTHash: Revisiting FCH Minimal Perfect Hashing}. SIGIR conference presentation. Montreal, Canada (Virtual event).}
+\cvitem{04/2021}{\emph{Compressed Indexes for Fast Search of Semantic Data}. ICDE conference presentation. Chania, Greece (Virtual event).}
+\cvitem{03/2021}{\emph{Fast and Compact Set Intersection through Recursive Universe Partitioning}. DCC conference presentation. Snow Bird, USA (Virtual event).}
+\cvitem{27/07/2020}{\emph{Efficient and Effective Query Auto-Completion}. SIGIR conference presentation. Xi'An, China (Virtual event).}
+\cvitem{17/09/2019}{\emph{Compressed Indexes for Fast Search of Semantic Data}. IIR conference presentation. Department of Information Engineering, Padova, Italy.}
+\cvitem{12/02/2019}{\emph{Fast Dictionary-based Compression for Inverted Indexes}. WSDM conference presentation. Melbourne Exhibition Center, Melbourne, Australia.}
+\cvitem{10/08/2017}{\emph{Efficient Data Structures for Massive N-Gram Datasets}. SIGIR conference presentation. Keio Plaza Hotel, Tokyo, Japan.}
+\cvitem{06/07/2017}{\emph{Dynamic Elias-Fano Representation}. CPM conference presentation. University Library of Warsaw, Warsaw, Poland.}
+\cvitem{06/06/2017}{\emph{Efficient Data Structures for Massive N-Gram Datasets}. IIR conference presentation. Universit\`{a} della Szizzera Italiana, Lugano, Switzerland.}
+
+
+\medskip
+\subsection{\textbf{Seminars}}
+
+\cvitem{04/03/2021}{\emph{Efficiency for Real-World Applications}. ISTI-CNR, Pisa, Italy (Virtual event).}
+\cvitem{07/06/2019}{\emph{Ordered Set Problems}. ISTI-CNR, Pisa, Italy.}
+\cvitem{01/02/2019}{\emph{Indexing Compressed Data
+for Fast Retrieval}. The University of Pisa, Pisa, Italy.}
+\cvitem{29/10/2018}{\emph{Effective Web Graph
+Representations}. The University of Pisa, Pisa, Italy.}
+\cvitem{17/05/2018}{\emph{On Optimally Partitioning Variable-Byte Index Data}. RMIT University, Melbourne, Australia.}
+\cvitem{10/04/2018}{\emph{Elias-Fano Encoding: a powerful tool for data structure design}.  RIKEN AIP, Tokyo, Japan.}
+\cvitem{21/06/2016}{\emph{Elias-Fano Encoding: succinct representation of monotone integer sequences with search operations}. The University of Pisa, Pisa, Italy.}
+
+
+
+\medskip
+\subsection{\textbf{Other}}
+
+\cvitem{08/03/2019}{\emph{Space- and Time-Efficient Data Structures for Massive Datasets}. PhD thesis defense. The University of Pisa, Pisa, Italy.}
+\cvitem{15/11/2018}{\emph{Space- and Time-Efficient Data Structures for Massive Datasets}. PhD research results. The University of Pisa, Pisa, Italy.}
+\cvitem{10/10/2017}{\emph{Space- and Time-Efficient Data Structures for Massive Datasets}. PhD research results. The University of Pisa, Pisa, Italy.}
+\cvitem{17/10/2016}{\emph{Space- and Time-Efficient Data Structures for Massive Datasets} PhD thesis proposal. The University of Pisa, Pisa, Italy.}
+
+
+
+
+
+
+
 \section{Publications}
 
-\cvitem{}{\textbf{Average number of co-authors per publication: 20/18 = 1.111}
-\newline
-(PhD Thesis excluded.)}
-
-\bigskip
-\subsection{\textbf{Under Review}}
-
-\cvitem{2021}{Giulio Ermanno Pibiri and Roberto Trani, \emph{Parallel and External-Memory Construction of Minimal Perfect Hash Functions with PTHash}. CoRR, \url{https://arxiv.org/abs/2106.02350}, pages 12.}
-
-
+% \cvitem{}{\textbf{Average number of co-authors per publication: 24/19 = 1.263}
+% \newline
+% (PhD Thesis excluded.)}
 
 \bigskip
 \subsection{\textbf{Journal Papers}}
 
-\cvitem{2021}{Giulio Ermanno Pibiri and Shunsuke Kanda, \emph{Rank/Select Queries over Mutable Bitmaps}. Information Systems (INFOSYS), pages 15.
+\cvitem{INFOSYS 2021}{Giulio Ermanno Pibiri and Shunsuke Kanda, \emph{Rank/Select Queries over Mutable Bitmaps}. 2021. Information Systems (INFOSYS), pages 15.
 \newline
 Scimago Rating: \textbf{Q2}
 \newline
@@ -306,7 +391,7 @@ DOI: \href{https://www.sciencedirect.com/science/article/pii/S0306437921000235}{
 \newline
 ISSN: 0306-4379}
 
-\cvitem{2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Techniques for Inverted Index Compression}. ACM Computing Surveys (CSUR), pages 36.
+\cvitem{CSUR 2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Techniques for Inverted Index Compression}. 2020. ACM Computing Surveys (CSUR), pages 36.
 \newline
 Scimago Rating: \textbf{Q1}
 \newline
@@ -314,7 +399,7 @@ DOI: \href{https://dl.acm.org/doi/10.1145/3415148}{10.1145/3415148}
 \newline
 ISSN: 0360-0300}
 
-\cvitem{2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Practical Trade-Offs for the Prefix-Sum Problem}. Software: Practice and Experience (SPE), pages 29.
+\cvitem{SPE 2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Practical Trade-Offs for the Prefix-Sum Problem}. 2020. Software: Practice and Experience (SPE), pages 29.
 \newline
 Scimago Rating: \textbf{Q2}
 \newline
@@ -322,7 +407,7 @@ DOI: \href{https://onlinelibrary.wiley.com/doi/10.1002/spe.2918}{10.1002/spe.291
 \newline
 ISSN: 0038-0644}
 
-\cvitem{2020}{Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Compressed Indexes for Fast Search of Semantic Data}. IEEE Transactions on Knowledge and Data Engineering (TKDE), pages 12.
+\cvitem{TKDE 2020}{Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Compressed Indexes for Fast Search of Semantic Data}. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE), pages 12.
 \newline
 Scimago Rating: \textbf{Q1}
 \newline
@@ -330,7 +415,7 @@ DOI: \href{https://ieeexplore.ieee.org/document/8959165}{10.1109/TKDE.2020.29666
 \newline
 ISSN: 1041-4347}
 
-\cvitem{2019}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{On Optimally Partitioning Variable-Byte Codes}. IEEE Transactions on Knowledge and Data Engineering (TKDE), pages 12.
+\cvitem{TKDE 2019}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{On Optimally Partitioning Variable-Byte Codes}. 2019. IEEE Transactions on Knowledge and Data Engineering (TKDE), pages 12.
 \newline
 Scimago Rating: \textbf{Q1}
 \newline
@@ -338,7 +423,7 @@ DOI: \href{https://ieeexplore.ieee.org/document/8691421}{10.1109/TKDE.2019.29112
 \newline
 ISSN: 1041-4347}
 
-\cvitem{2019}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Handling Massive N-Gram Datasets Efficiently}. ACM Transactions on Information Systems (TOIS), pages 41.
+\cvitem{TOIS 2019}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Handling Massive N-Gram Datasets Efficiently}. 2019. ACM Transactions on Information Systems (TOIS), pages 41.
 \newline
 Scimago Rating: \textbf{Q1}
 \newline
@@ -346,7 +431,7 @@ DOI: \href{https://dl.acm.org/doi/10.1145/3302913}{10.1145/3302913}
 \newline
 ISSN: 1046-8188}
 
-\cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Clustered Elias-Fano Indexes}. ACM Transactions on Information Systems (TOIS), volume 2, pages 33.
+\cvitem{TOIS 2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Clustered Elias-Fano Indexes}. 2017. ACM Transactions on Information Systems (TOIS), volume 2, pages 33.
 \newline
 Scimago Rating: \textbf{Q1}
 \newline
@@ -360,7 +445,7 @@ ISSN: 1046-8188}
 \subsection{\textbf{Conference Papers}}
 
 
-\cvitem{2021}{Andrea Bruno, Franco Maria Nardini, Giulio Ermanno Pibiri, Roberto Trani, and Rossano Venturini, \emph{TSXor: A Simple Time Series Compression Algorithm}.
+\cvitem{SPIRE 2021}{Andrea Bruno, Franco Maria Nardini, Giulio Ermanno Pibiri, Roberto Trani, and Rossano Venturini, \emph{TSXor: A Simple Time Series Compression Algorithm}. 2021.
 International Symposium on String Processing and Information Retrieval (SPIRE),
 8 pages.
 \newline
@@ -371,7 +456,7 @@ DOI: To Appear.
 ISBN: To Appear.
 }
 
-\cvitem{2021}{Giulio Ermanno Pibiri and Roberto Trani, \emph{PTHash: Revisiting FCH Minimal Perfect Hashing}. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.
+\cvitem{SIGIR 2021}{Giulio Ermanno Pibiri and Roberto Trani, \emph{PTHash: Revisiting FCH Minimal Perfect Hashing}. 2021. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.
 \newline
 GGS Rating: \textbf{A++}
 \newline
@@ -379,7 +464,7 @@ DOI: \href{https://dl.acm.org/doi/10.1145/3404835.3462849}{10.1145/3404835.34628
 \newline
 ISBN: 9781450380379}
 
-\cvitem{2021}{Giulio Ermanno Pibiri, \emph{Fast and Compact Set Intersection through Recursive Universe Partitioning}. IEEE Data Compression Conference (DCC), pages 10.
+\cvitem{DCC 2021}{Giulio Ermanno Pibiri, \emph{Fast and Compact Set Intersection through Recursive Universe Partitioning}. 2021. IEEE Data Compression Conference (DCC), pages 10.
 \newline
 GGS Rating: \textbf{A-}
 \newline
@@ -387,7 +472,7 @@ DOI: \href{https://ieeexplore.ieee.org/document/9418701}{10.1109/DCC50243.2021.0
 \newline
 ISBN: 9781665403337}
 
-\cvitem{2020}{Simon Gog, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Efficient and Effective Query Auto-Completion}. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.
+\cvitem{SIGIR 2020}{Simon Gog, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Efficient and Effective Query Auto-Completion}. 2020. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.
 \newline
 GGS Rating: \textbf{A++}
 \newline
@@ -395,7 +480,7 @@ DOI: \href{https://dl.acm.org/doi/10.1145/3397271.3401432}{10.1145/3397271.34014
 \newline
 ISBN: 9781450380164}
 
-\cvitem{2019}{Giulio Ermanno Pibiri, Matthias Petri, Alistair Moffat, \emph{Fast Dictionary-based Compression for Inverted Indexes}. ACM Conference on Web Search and Data Mining (WSDM), pages 9.
+\cvitem{WSDM 2019}{Giulio Ermanno Pibiri, Matthias Petri, Alistair Moffat, \emph{Fast Dictionary-based Compression for Inverted Indexes}. 2019. ACM Conference on Web Search and Data Mining (WSDM), pages 9.
 \newline
 GGS Rating: \textbf{A+}
 \newline
@@ -403,7 +488,7 @@ DOI: \href{https://dl.acm.org/doi/10.1145/3289600.3290962}{10.1145/3289600.32909
 \newline
 ISBN: 9781450359405}
 
-\cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Efficient Data Structures for Massive N-Gram Datasets}. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.
+\cvitem{SIGIR 2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Efficient Data Structures for Massive N-Gram Datasets}. 2017. ACM Conference on Research and Development in Information Retrieval (SIGIR), pages 10.
 \newline
 GGS Rating: \textbf{A++}
 \newline
@@ -411,7 +496,7 @@ DOI: \href{https://dl.acm.org/doi/10.1145/3077136.3080798}{10.1145/3077136.30807
 \newline
 ISBN: 9781450350228}
 
-\cvitem{2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Dynamic Elias-Fano Representation}. Annual Symposium on Combinatorial Pattern Matching (CPM), pages 14.
+\cvitem{CPM 2017}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Dynamic Elias-Fano Representation}. 2017. Annual Symposium on Combinatorial Pattern Matching (CPM), pages 14.
 \newline
 GGS Rating: B
 \newline
@@ -424,7 +509,7 @@ ISBN: 9783959770392}
 \bigskip
 \subsection{\textbf{Posters}}
 
-\cvitem{2021}{Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Compressed Indexes for Fast Search of Semantic Data}. IEEE International Conference on Data Engineering (ICDE), pages 2.
+\cvitem{ICDE 2021}{Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini, \emph{Compressed Indexes for Fast Search of Semantic Data}. 2021. IEEE International Conference on Data Engineering (ICDE), pages 2.
 \newline
 GGS Rating: \textbf{A++}
 \newline
@@ -436,9 +521,9 @@ ISBN: 9781728191850}
 \bigskip
 \subsection{\textbf{Chapters and Theses}}
 
-\cvitem{2019}{Giulio Ermanno Pibiri. \emph{Space- and Time-Efficient Data Structures for Massive Datasets}. Ph.D. Thesis, University of Pisa, 210 pages.}
+\cvitem{2019}{Giulio Ermanno Pibiri. \emph{Space- and Time-Efficient Data Structures for Massive Datasets}. 2019. Ph.D. Thesis, University of Pisa, 210 pages.}
 
-\cvitem{2018}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Inverted Index Compression}. Encyclopedia of Big Data Technologies (EBDT), pages 8.
+\cvitem{EBDT 2018}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Inverted Index Compression}. 2018. Encyclopedia of Big Data Technologies (EBDT), pages 8.
 \newline
 DOI: \href{https://link.springer.com/referenceworkentry/10.1007\%2F978-3-319-63962-8\_52-1}{10.1007/978-3-319-63962-8\_52-1}
 \newline
@@ -449,18 +534,22 @@ ISBN: 9783319639628}
 \bigskip
 \subsection{\textbf{Other}}
 
-\cvitem{2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Succinct Dynamic Ordered Sets with Random Access}. CoRR, \url{https://arxiv.org/abs/2003.11835}, pages 15.}
+\cvitem{2021}{Giulio Ermanno Pibiri and Roberto Trani, \emph{Parallel and External-Memory Construction of Minimal Perfect Hash Functions with PTHash}. 2021. CoRR, \url{https://arxiv.org/abs/2106.02350}, pages 12.}
 
-\cvitem{2019}{Giulio Ermanno Pibiri. \emph{On Implementing the Binary Interpolative Coding Algorithm}. Tech Report, 8 pages.}
+\cvitem{2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Succinct Dynamic Ordered Sets with Random Access}. 2020. CoRR, \url{https://arxiv.org/abs/2003.11835}, pages 15.}
+
+\cvitem{2019}{Giulio Ermanno Pibiri. \emph{On Implementing the Binary Interpolative Coding Algorithm}. 2019. Tech Report, 8 pages.}
 
 
 
 
-% \newpage
+\newpage
 
 \section{Software}
 
-\cvitem{GitHub profile}{\url{https://github.com/jermp}}
+\cvitem{GitHub profile}{
+All software is open-source and available from \url{https://github.com/jermp}.
+}
 
 \bigskip
 \subsection{\textbf{Data Structures}}
@@ -480,7 +569,7 @@ A more detailed list follows below.
 \cvitem{\href{https://github.com/jermp/pthash}{\textbf{pthash}}}{
 PTHash: Fast and compact minimal perfect hash functions.
 \newline
-Reference publications: SIGIR 2021, arXiv 2106.02350 2021.
+Reference publications: SIGIR 2021, arXiv 2106.02350.
 % The \textsf{C++} library used for the experiments in the papers \emph{PTHash: Revisiting FCH Minimal Perfect Hashing} and \emph{Parallel and External-Memory Construction of Minimal Perfect Hash Functions with PTHash}.
 }
 
@@ -600,81 +689,8 @@ A self-contained, header-only, implementation of memory-mapped files in C++ for 
 }
 
 
-\section{Talks}
-
-\cvitem{07/2021}{\emph{PTHash: Revisiting FCH Minimal Perfect Hashing}. SIGIR conference presentation. Virtual event.}
-
-\cvitem{04/2021}{\emph{Compressed Indexes for Fast Search of Semantic Data}. ICDE conference presentation. Virtual event.}
-
-\cvitem{03/2021}{\emph{Fast and Compact Set Intersection through Recursive Universe Partitioning}. DCC conference presentation. Virtual event.}
-
-\cvitem{04/03/2021}{\emph{Efficiency for Real-World Applications}. Seminar. ISTI-CNR. Virtual event.}
-
-\cvitem{27/07/2020}{\emph{Efficient and Effective Query Auto-Completion}. SIGIR conference presentation. Virtual event.}
-
-\cvitem{17/09/2019}{\emph{Compressed Indexes for Fast Search of Semantic Data}. IIR conference presentation. Department of Information Engineering, Padova, Italy.}
-
-\cvitem{07/06/2019}{\emph{Ordered Set Problems}. Seminar. ISTI-CNR, Pisa, Italy.}
-
-\cvitem{08/03/2019}{\emph{Space- and Time-Efficient Data Structures}. PhD thesis defense. The University of Pisa, Pisa, Italy.}
-
-\cvitem{12/02/2019}{\emph{Fast Dictionary-based Compression for Inverted Indexes}. WSDM conference presentation. Melbourne Exhibition Center, Melbourne, Australia.}
-
-\cvitem{01/02/2019}{\emph{Indexing Compressed Data
-for Fast Retrieval}. Talk. The University of Pisa, Pisa, Italy.}
-
-\cvitem{15/11/2018}{\emph{Space- and Time-Efficient Data Structures}. PhD research results. The University of Pisa, Pisa, Italy.}
-
-\cvitem{29/10/2018}{\emph{Effective Web Graph
-Representations}. Seminar. The University of Pisa, Pisa, Italy.}
-
-\cvitem{17/05/2018}{\emph{On Optimally Partitioning Variable-Byte Index Data}. Seminar. RMIT University, Melbourne, Australia.}
-
-\cvitem{10/04/2018}{\emph{Elias-Fano Encoding: a powerful tool for data structure design}. Seminar. RIKEN AIP, Tokyo, Japan.}
-
-\cvitem{10/10/2017}{\emph{Space- and Time-Efficient Data Structures}. PhD research results. The University of Pisa, Pisa, Italy.}
-
-\cvitem{10/08/2017}{\emph{Efficient Data Structures for Massive N-Gram Datasets}. SIGIR conference presentation. Keio Plaza Hotel, Tokyo, Japan.}
-
-\cvitem{06/07/2017}{\emph{Dynamic Elias-Fano Representation}. CPM conference presentation. University Library of Warsaw, Warsaw, Poland.}
-
-\cvitem{06/06/2017}{\emph{Efficient Data Structures for Massive N-Gram Datasets}. IIR conference presentation. Universit\`{a} della Szizzera Italiana, Lugano, Switzerland.}
-
-\cvitem{17/10/2016}{\emph{Space- and Time-Efficient Data Structures} PhD thesis proposal. The University of Pisa, Pisa, Italy.}
-
-\cvitem{21/06/2016}{\emph{Elias-Fano Encoding: succinct representation of monotone integer sequences with search operations}. Seminar. The University of Pisa, Pisa, Italy.}
 
 
-\section{Professional Activities}
-
-\cvitem{2021}{Member of the Program Committee of the 15th IEEE International Conference on Application of Information and Communication Technologies (AICT 2021).}
-
-\cvitem{2021}{Member of the Program Committee of the 30-th ACM International Conference on Information and Knowledge Management (CIKM 2021).}
-
-\cvitem{2021}{Member of the Program Committee of the 44-th ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2021).}
-
-\cvitem{2021}{Member of the Program Committee of the 43-rd European Conference on Information Retrieval (ECIR 2021).}
-
-\cvitem{2020}{Member of the Program Committee of the 14-th International ACM Conference on Web Search and Data Mining (WSDM 2021).}
-
-\cvitem{2020}{Member of the Program Committee of the 29-th ACM International Conference on Information and Knowledge Management (CIKM 2020).}
-
-\cvitem{2020}{Member of the Organizing Committee of the 28-th edition of the Annual European Symposium on Algorithms (ESA 2020).}
-
-\cvitem{2020}{Member of the Program Committee of the 43-rd ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2020).}
-
-\cvitem{2019}{Member of the Program Committee of the 42-nd ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2019).}
-
-\cvitem{2019}{Member of the Organizing Committee of the 30-th edition of the International Symposium on Combinatorial Pattern Matching (CPM 2019).}
-
-\cvitem{2018}{Member of the Program Committee of the 2-nd Workshop on Knowledge Graphs and Semantics for Text Retrieval and Analysis (KG4IR), in conjuction with ACM SIGIR 2018.}
-
-\cvitem{2017}{Member of the Organizing Committee of the 24-th International Symposium on String Processing and Information Retrieval (SPIRE 2017).}
-
-\cvitem{2016}{Student volunteer for the organization of the 39-th ACM International SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2016).}
-
-\cvitem{2016 -- present}{Anonymous reviewer for the following conferences/journals:
-SIGIR, WSDM, WWW, CIKM, TALG, ESA, INFOSYS, SPE, CPM, DCC, ECIR, SPIRE, Algorithmica.}
 
 %\section{Computer skills}
 %\cvitem{OS}{Mac OS X, Linux.}

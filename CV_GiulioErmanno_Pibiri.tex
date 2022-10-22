@@ -117,6 +117,8 @@ The proposed solutions are available as research papers
 and optimized software libraries (written in C++).}
 
 \cvitem{Research Problems}{
+\emph{Reference Indexing};
+\emph{Locality-Preserving Minimal Perfect Hashing for K-Mers};
 \emph{Compressed and Weighted Dictionaries for K-Mers} (BIOINF 2022, WABI 2022);
 \emph{Time Series Compression} (SPIRE 2021);
 \emph{Minimal Perfect Hashing} (SIGIR 2021);
@@ -193,6 +195,10 @@ Part of the research was conducted \textbf{abroad} (6 months):
 }
 
 \section{Research Visits}
+
+\cvitem{19/10/2022 -- 21/10/2022}{
+Inria, Rennes, France. Visiting dr. Pierre Peterlongo and dr. Karel Brinda.
+}
 
 \cvitem{10/05/2022 -- 12/05/2022}{
 The University of Lille, CNRS, CRIStAL Laboratory, Lille, France. Visiting dr. Antoine Limasset and dr. Camille Marchet.
@@ -402,6 +408,7 @@ issued by the University of Pisa, Department of Computer Science.}
     \item ESA -- European Symposium on Algorithms
     \item SPIRE -- String Processing and Information Retrieval
     \item ISAAC -- International Symposium on Algorithms and Computation
+    \item RECOMB -- International Conference on Research in Computational Molecular Biology
 \end{itemize}
 }
 
@@ -423,6 +430,7 @@ issued by the University of Pisa, Department of Computer Science.}
 \medskip
 \subsection{\textbf{Invited Keynote}}
 
+\cvitem{20/10/2022}{\emph{Modular reference indexing with the de Bruijn graph: overview and challenges}. Workshop on Indexing Omic Sequences. Rennes, France.}
 \cvitem{10/05/2022}{\emph{On Weighted K-Mer Dictionaries}. TUDASTIC 2022 (TUtorials on DAta Structures for Text Indexation and Compression). Lille, France.}
 
 
@@ -640,6 +648,8 @@ ISBN: 9783319639628}
 \bigskip
 \subsection{\textbf{Pre-Prints}}
 
+\cvitem{2022}{Giulio Ermanno Pibiri, Yoshihiro Shibuya, and Antoine Limasset, \emph{Locality-Preserving Minimal Perfect Hashing of $k$-mers}. 2022. ArXiv, \textcolor{red}{\url{https://arxiv.org/abs/xxxx.xxxx}, pages XX.}}
+
 \cvitem{2021}{Giulio Ermanno Pibiri and Roberto Trani, \emph{Parallel and External-Memory Construction of Minimal Perfect Hash Functions with PTHash}. 2021. ArXiv, \url{https://arxiv.org/abs/2106.02350}, pages 12.}
 
 \cvitem{2020}{Giulio Ermanno Pibiri and Rossano Venturini, \emph{Succinct Dynamic Ordered Sets with Random Access}. 2020. ArXiv, \url{https://arxiv.org/abs/2003.11835}, pages 15.}
@@ -667,7 +677,7 @@ All software is open-source and available from \url{https://github.com/jermp}.
 \item Compressed Bitmaps (DCC 2021)
 \item Mutable Bitmaps with Rank/Select (INFOSYS 2021)
 \item Segment-Trees and Fenwick-Trees (SPE 2020)
-\item Minimal Perfect Hash Functions (SIGIR 2021)
+\item Minimal Perfect Hash Functions (SIGIR 2021), Locality-Preserving Minimal Perfect Hash Functions
 \item K-Mer Dictionaries (BIOINF 2022, WABI 2022)
 \end{itemize}
 A more detailed list follows below.
@@ -675,9 +685,17 @@ A more detailed list follows below.
 
 \cvitem{\href{https://github.com/jermp/sshash}{\textbf{sshash}}}{
 SSHash: A compressed, weighted, associative, exact dictionary for k-mers.
+(See also the membership-only version \href{https://github.com/jermp/sshash-lite}{\textbf{sshash-lite}}.)
 \newline
 Reference publication: BIOINF 2022, WABI 2022.
 }
+
+\cvitem{\href{https://github.com/jermp/lphash}{\textbf{lphash}}}{
+LPHash: Fast and compact locality-preserving minimal perfect hashing for k-mer sets.
+\newline
+Reference publication: \textcolor{red}{ArXiv xxxx.xxxx}.
+}
+
 
 \cvitem{\href{https://github.com/jermp/pthash}{\textbf{pthash}}}{
 PTHash: Fast and compact minimal perfect hash functions.
